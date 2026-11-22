@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MOHONA — Fresh &amp; Finest | Fresh Fish, Crab &amp; Seafood Delivered</title>
+<meta name="description" content="Order fresh fish, live crab, prawns, lobster and desi meat online from MOHONA. Pay with Razorpay or Cash on Delivery. Santoshpur • Salt Lake • Siliguri.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;600&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{--sea:#0b3d5c;--sea2:#0f5e8a;--coral:#ff5a36;--sand:#fff7ef;--ink:#13212b;--muted:#5f6f7a;--line:#e5eaee;--ok:#1f9d55}
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;font-family:Poppins,system-ui,sans-serif;color:var(--ink);background:#fff}
+  .bn{font-family:"Hind Siliguri",sans-serif}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 20px}
+  .demo-bar{background:var(--ink);color:#fff;font-size:12.5px;text-align:center;padding:7px 12px}
+  .demo-bar b{color:var(--coral)}
+  /* nav */
+  nav{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.95);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+  nav .wrap{display:flex;align-items:center;justify-content:space-between;height:66px}
+  .logo{font-weight:800;font-size:22px;letter-spacing:4px;color:var(--sea)}
+  .logo small{display:block;font-size:10px;letter-spacing:2px;color:var(--coral);font-weight:600;margin-top:-4px}
+  .links{display:flex;gap:26px;font-size:14px;font-weight:500}
+  .links a:hover{color:var(--coral)}
+  .cart-btn{position:relative;background:var(--sea);color:#fff;border:0;border-radius:40px;padding:10px 18px;font:600 14px Poppins;cursor:pointer}
+  .cart-btn .count{position:absolute;top:-6px;right:-6px;background:var(--coral);border-radius:50%;width:22px;height:22px;font-size:12px;display:grid;place-items:center}
+  /* hero */
+  .hero{background:radial-gradient(1200px 500px at 80% 0%,#1a7bb0 0%,transparent 60%),linear-gradient(135deg,var(--sea) 0%,#082a40 100%);color:#fff;overflow:hidden;position:relative}
+  .hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center;padding-top:70px;padding-bottom:90px}
+  .tag{display:inline-block;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25);border-radius:30px;padding:6px 14px;font-size:13px;margin-bottom:18px}
+  .hero h1{font-size:52px;line-height:1.08;margin:0 0 16px;font-weight:800}
+  .hero h1 span{color:var(--coral)}
+  .hero p{font-size:17px;opacity:.9;max-width:520px;margin:0 0 28px}
+  .btn{display:inline-block;border:0;border-radius:40px;padding:14px 28px;font:600 15px Poppins;cursor:pointer;transition:.2s}
+  .btn.primary{background:var(--coral);color:#fff;box-shadow:0 10px 30px rgba(255,90,54,.35)}
+  .btn.primary:hover{transform:translateY(-2px)}
+  .btn.ghost{background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,.5);margin-left:10px}
+  .trust{display:flex;gap:24px;margin-top:34px;font-size:13px;opacity:.9;flex-wrap:wrap}
+  .trust div b{display:block;font-size:22px}
+  .hero-art{position:relative;height:380px}
+  .bubble{position:absolute;border-radius:50%;display:grid;place-items:center;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);animation:float 6s ease-in-out infinite}
+  .bubble.b1{width:250px;height:250px;font-size:130px;left:60px;top:40px}
+  .bubble.b2{width:130px;height:130px;font-size:64px;right:10px;top:0;animation-delay:-2s}
+  .bubble.b3{width:120px;height:120px;font-size:58px;right:40px;bottom:10px;animation-delay:-4s}
+  .bubble.b4{width:96px;height:96px;font-size:46px;left:0;bottom:20px;animation-delay:-3s}
+  @keyframes float{50%{transform:translateY(-14px)}}
+  .wave{position:absolute;bottom:-1px;left:0;width:100%;height:60px}
+  /* sections */
+  section{padding:70px 0}
+  .head{text-align:center;margin-bottom:36px}
+  .head h2{font-size:34px;margin:0 0 8px}
+  .head p{color:var(--muted);margin:0}
+  .eyebrow{color:var(--coral);font-weight:600;font-size:13px;letter-spacing:2px;text-transform:uppercase}
+  /* categories */
+  .cats{display:grid;grid-template-columns:repeat(5,1fr);gap:16px}
+  .cat{background:var(--sand);border-radius:18px;padding:22px 14px;text-align:center;cursor:pointer;border:2px solid transparent;transition:.2s}
+  .cat:hover,.cat.active{border-color:var(--coral);transform:translateY(-3px)}
+  .cat .ic{font-size:42px}
+  .cat h3{font-size:15px;margin:8px 0 2px}
+  .cat .bn{font-size:14px;color:var(--muted)}
+  /* products */
+  .filters{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-bottom:28px}
+  .chip{border:1.5px solid var(--line);background:#fff;border-radius:30px;padding:8px 16px;font:500 13px Poppins;cursor:pointer}
+  .chip.active{background:var(--sea);color:#fff;border-color:var(--sea)}
+  .grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+  .card{border:1px solid var(--line);border-radius:18px;overflow:hidden;display:flex;flex-direction:column;transition:.2s;background:#fff}
+  .card:hover{box-shadow:0 14px 40px rgba(11,61,92,.12);transform:translateY(-3px)}
+  .thumb{height:140px;display:grid;place-items:center;font-size:64px;position:relative}
+  .thumb .code{position:absolute;top:10px;left:10px;background:rgba(255,255,255,.9);font-size:11px;font-weight:600;padding:3px 8px;border-radius:20px;color:var(--sea)}
+  .thumb .badge{position:absolute;top:10px;right:10px;background:var(--coral);color:#fff;font-size:11px;font-weight:600;padding:3px 8px;border-radius:20px}
+  .body{padding:14px 16px 16px;display:flex;flex-direction:column;flex:1}
+  .body h4{margin:0;font-size:15px}
+  .body .bn{color:var(--muted);font-size:14px}
+  .body .meta{font-size:12px;color:var(--muted);margin:6px 0 12px}
+  .row{display:flex;align-items:center;justify-content:space-between;margin-top:auto}
+  .price{font-weight:700;font-size:18px;color:var(--sea)}
+  .price small{font-weight:500;font-size:12px;color:var(--muted)}
+  .add{background:var(--coral);color:#fff;border:0;border-radius:30px;padding:8px 14px;font:600 13px Poppins;cursor:pointer}
+  .add.call{background:var(--sea)}
+  /* features */
+  .why{background:var(--sand)}
+  .feat{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+  .f{background:#fff;border-radius:18px;padding:26px 22px}
+  .f .ic{font-size:34px}
+  .f h3{font-size:16px;margin:10px 0 6px}
+  .f p{font-size:13.5px;color:var(--muted);margin:0}
+  /* payments */
+  .pay{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+  .pcard{border-radius:22px;padding:32px;color:#fff;position:relative;overflow:hidden}
+  .pcard.rz{background:linear-gradient(135deg,#0c2451,#3395ff)}
+  .pcard.cod{background:linear-gradient(135deg,#0b3d5c,#1f9d55)}
+  .pcard h3{font-size:22px;margin:6px 0 10px}
+  .pcard ul{margin:0;padding-left:18px;opacity:.92;font-size:14px;line-height:1.8}
+  .pcard .big{position:absolute;right:20px;bottom:-10px;font-size:110px;opacity:.15}
+  /* branches */
+  .branches{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+  .br{border:1px solid var(--line);border-radius:18px;padding:24px;text-align:center}
+  .br .ic{font-size:34px}
+  .br h3{margin:8px 0 4px}
+  .br p{margin:0;color:var(--muted);font-size:14px}
+  /* cta + footer */
+  .cta{background:linear-gradient(135deg,var(--coral),#ff8a3d);color:#fff;border-radius:26px;padding:44px;display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
+  .cta h2{margin:0 0 6px;font-size:30px}
+  .cta .btn{background:#fff;color:var(--coral)}
+  footer{background:var(--ink);color:#c9d3da;padding:50px 0 24px;margin-top:70px;font-size:14px}
+  footer .cols{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:30px}
+  footer h4{color:#fff;margin:0 0 12px}
+  footer a:hover{color:#fff}
+  footer .bottom{border-top:1px solid #2a3a46;margin-top:34px;padding-top:18px;display:flex;justify-content:space-between;font-size:12.5px;flex-wrap:wrap;gap:10px}
+  footer .dev b{color:#fff}footer .dev span{color:var(--coral);font-weight:700}
+  /* drawer + modal */
+  .overlay{position:fixed;inset:0;background:rgba(10,25,35,.5);opacity:0;pointer-events:none;transition:.25s;z-index:40}
+  .overlay.show{opacity:1;pointer-events:auto}
+  .drawer{position:fixed;top:0;right:0;height:100%;width:400px;max-width:92vw;background:#fff;z-index:50;transform:translateX(100%);transition:.3s;display:flex;flex-direction:column}
+  .drawer.show{transform:none}
+  .drawer header{display:flex;justify-content:space-between;align-items:center;padding:20px;border-bottom:1px solid var(--line)}
+  .drawer header h3{margin:0}
+  .x{background:none;border:0;font-size:26px;cursor:pointer;line-height:1}
+  .items{flex:1;overflow:auto;padding:10px 20px}
+  .it{display:flex;gap:12px;align-items:center;padding:12px 0;border-bottom:1px solid var(--line)}
+  .it .e{font-size:30px;width:50px;height:50px;border-radius:12px;background:var(--sand);display:grid;place-items:center}
+  .it .n{flex:1;font-size:14px}.it .n small{display:block;color:var(--muted)}
+  .qty{display:flex;align-items:center;gap:8px}
+  .qty button{width:26px;height:26px;border-radius:50%;border:1px solid var(--line);background:#fff;cursor:pointer}
+  .empty{text-align:center;color:var(--muted);padding:60px 0}
+  .sum{padding:20px;border-top:1px solid var(--line)}
+  .sum .l{display:flex;justify-content:space-between;font-size:14px;margin-bottom:6px}
+  .sum .t{font-weight:700;font-size:18px}
+  .sum .btn{width:100%;margin-top:10px}
+  .modal{position:fixed;left:50%;top:50%;transform:translate(-50%,-46%);opacity:0;pointer-events:none;background:#fff;border-radius:22px;width:460px;max-width:94vw;max-height:92vh;overflow:auto;z-index:60;padding:26px;transition:.25s}
+  .modal.show{opacity:1;pointer-events:auto;transform:translate(-50%,-50%)}
+  .modal h3{margin:0 0 14px}
+  .modal label{font-size:13px;font-weight:500;display:block;margin:10px 0 4px}
+  .modal input,.modal select{width:100%;padding:11px 12px;border:1.5px solid var(--line);border-radius:10px;font:14px Poppins}
+  .opts{display:grid;gap:10px;margin:14px 0}
+  .opt{border:2px solid var(--line);border-radius:14px;padding:12px 14px;cursor:pointer;display:flex;gap:12px;align-items:center}
+  .opt.sel{border-color:var(--coral);background:#fff4f0}
+  .opt b{display:block;font-size:14px}.opt small{color:var(--muted)}
+  .opt .ic{font-size:26px}
+  .done{text-align:center;padding:10px 0}
+  .done .ic{font-size:60px}
+  .toast{position:fixed;bottom:24px;left:50%;transform:translate(-50%,120px);background:var(--ink);color:#fff;padding:12px 20px;border-radius:30px;font-size:14px;z-index:70;transition:.3s}
+  .toast.show{transform:translate(-50%,0)}
+  @media(max-width:960px){
+    .hero .wrap{grid-template-columns:1fr}.hero-art{display:none}.hero h1{font-size:38px}
+    .cats{grid-template-columns:repeat(3,1fr)}.grid{grid-template-columns:repeat(2,1fr)}
+    .feat{grid-template-columns:1fr 1fr}.pay,.branches,footer .cols{grid-template-columns:1fr}.links{display:none}
+  }
+  @media(max-width:520px){.grid,.cats{grid-template-columns:1fr 1fr}.feat{grid-template-columns:1fr}.btn.ghost{margin:10px 0 0}}
+</style>
+</head>
+<body>
+
+<div class="demo-bar">🚧 <b>Demo preview</b> — designed by Devriazul for MOHONA. No real orders or payments are taken.</div>
+
+<nav>
+  <div class="wrap">
+    <a href="#" class="logo">MOHONA<small>FRESH &amp; FINEST</small></a>
+    <div class="links">
+      <a href="#categories">Categories</a><a href="#shop">Shop</a><a href="#payments">Payments</a><a href="#branches">Branches</a><a href="#contact">Contact</a>
+    </div>
+    <button class="cart-btn" onclick="openCart()">🛒 Cart <span class="count" id="count">0</span></button>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap">
+    <div>
+      <span class="tag">🐟 Fresh catch, delivered every day in Kolkata &amp; Siliguri</span>
+      <h1>Fresh fish &amp; <span>live crab</span>, straight to your door.</h1>
+      <p>Bagda &amp; Golda prawns, Ilish, Bhetki, lobster, Andaman green crab and desi meat, cleaned and cut the way you like. Pay online with Razorpay or with cash on delivery.</p>
+      <a href="#shop" class="btn primary">Shop now</a>
+      <a href="https://wa.me/918601506252" class="btn ghost" target="_blank" rel="noopener">💬 Order on WhatsApp</a>
+      <div class="trust">
+        <div><b>45+</b>Products</div>
+        <div><b>3</b>Branches</div>
+        <div><b>100%</b>Full roe guarantee*</div>
+        <div><b>COD</b>&amp; UPI</div>
+      </div>
+    </div>
+    <div class="hero-art">
+      <div class="bubble b1">🦀</div><div class="bubble b2">🦐</div><div class="bubble b3">🐟</div><div class="bubble b4">🦞</div>
+    </div>
+  </div>
+  <svg class="wave" viewBox="0 0 1440 60" preserveAspectRatio="none"><path fill="#fff" d="M0,30 C240,70 480,0 720,25 C960,50 1200,10 1440,35 L1440,60 L0,60 Z"/></svg>
+</header>
+
+<section id="categories">
+  <div class="wrap">
+    <div class="head"><div class="eyebrow">Browse</div><h2>Shop by category</h2><p>Everything in the MOHONA catalogue, all in one place.</p></div>
+    <div class="cats" id="cats"></div>
+  </div>
+</section>
+
+<section id="shop" style="padding-top:20px">
+  <div class="wrap">
+    <div class="head"><div class="eyebrow">Today's catch</div><h2>Fresh &amp; Finest</h2><p>Prices are per kg unless shown otherwise. Items marked "Market rate" change daily.</p></div>
+    <div class="filters" id="filters"></div>
+    <div class="grid" id="grid"></div>
+  </div>
+</section>
+
+<section class="why">
+  <div class="wrap">
+    <div class="head"><div class="eyebrow">Why MOHONA</div><h2>Freshness you can taste</h2></div>
+    <div class="feat">
+      <div class="f"><div class="ic">🧊</div><h3>Cold-chain fresh</h3><p>Packed on ice from the market to your kitchen, never frozen for weeks.</p></div>
+      <div class="f"><div class="ic">🔪</div><h3>Cleaned &amp; cut</h3><p>Curry cut, whole or fillet. Tell us how you want it and it arrives ready to cook.</p></div>
+      <div class="f"><div class="ic">🦀</div><h3>Full roe guarantee</h3><p>Our special female crabs come with a 100% full roe guarantee.</p></div>
+      <div class="f"><div class="ic">🚚</div><h3>Choose a time slot</h3><p>Pick a delivery slot that suits you. Desi mutton is delivered on Sundays only.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="payments">
+  <div class="wrap">
+    <div class="head"><div class="eyebrow">Checkout</div><h2>Pay your way</h2><p>Secure online payment, or pay when your order arrives.</p></div>
+    <div class="pay">
+      <div class="pcard rz"><small>ONLINE PAYMENT</small><h3>Razorpay</h3><ul><li>UPI: GPay, PhonePe, Paytm, BHIM</li><li>Debit &amp; credit cards</li><li>Net banking &amp; wallets</li><li>Instant confirmation &amp; easy refunds</li></ul><div class="big">💳</div></div>
+      <div class="pcard cod"><small>PAY ON DELIVERY</small><h3>Cash on Delivery</h3><ul><li>Pay cash or UPI at your door</li><li>Available in eligible delivery areas</li><li>Phone OTP check for secure orders</li><li>Weigh &amp; check before you pay</li></ul><div class="big">💵</div></div>
+    </div>
+  </div>
+</section>
+
+<section id="branches" style="padding-top:10px">
+  <div class="wrap">
+    <div class="head"><div class="eyebrow">Find us</div><h2>Our 3 branches</h2><p class="bn">আমাদের ৩টি শাখা</p></div>
+    <div class="branches">
+      <div class="br"><div class="ic">📍</div><h3>Santoshpur</h3><p>Kolkata (South)</p></div>
+      <div class="br"><div class="ic">📍</div><h3>Salt Lake</h3><p>Kolkata (Bidhannagar)</p></div>
+      <div class="br"><div class="ic">📍</div><h3>Siliguri</h3><p>North Bengal</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" style="padding-top:0;padding-bottom:0">
+  <div class="wrap">
+    <div class="cta">
+      <div><h2>Hungry for something fresh?</h2><div>Call or WhatsApp us at <b>8601506252</b>, or order online.</div></div>
+      <a href="#shop" class="btn">Start your order →</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="cols">
+      <div><div class="logo" style="color:#fff">MOHONA<small>FRESH &amp; FINEST</small></div><p style="margin-top:14px;max-width:320px">Fresh fish, live crab, prawns, lobster and desi meat, delivered across Kolkata and Siliguri.</p></div>
+      <div><h4>Contact</h4>📞 <a href="tel:+918601506252">8601506252</a><br>✉ <a href="mailto:Support@mohona.store">Support@mohona.store</a><br>💬 <a href="https://wa.me/918601506252" target="_blank" rel="noopener">WhatsApp</a></div>
+      <div><h4>Websites</h4>mohona.online<br>mohona.store<br>mohona.co.in</div>
+    </div>
+    <div class="bottom"><span>© 2026 MOHONA — Fresh &amp; Finest. * Applies to special female crabs.</span><span class="dev">Designed &amp; developed by <b>Dev</b><span>riazul</span></span></div>
+  </div>
+</footer>
+
+<!-- cart drawer -->
+<div class="overlay" id="overlay" onclick="closeAll()"></div>
+<aside class="drawer" id="drawer">
+  <header><h3>Your cart</h3><button class="x" onclick="closeAll()">×</button></header>
+  <div class="items" id="items"></div>
+  <div class="sum" id="sum"></div>
+</aside>
+
+<!-- checkout modal -->
+<div class="modal" id="modal"></div>
+<div class="toast" id="toast"></div>
+
+<script>
+const CATS = [
+  {id:'fish', ic:'🐟', en:'Marine & River Fish', bn:'সামুদ্রিক ও নদীর মাছ', bg:'#e6f3fb'},
+  {id:'prawn', ic:'🦐', en:'Prawns & Seafood', bn:'চিংড়ি ও সি-ফুড', bg:'#fff0e8'},
+  {id:'crab', ic:'🦀', en:'Live & Fresh Crab', bn:'কাঁকড়া কালেকশন', bg:'#ffe9e4'},
+  {id:'lobster', ic:'🦞', en:'Lobster & Exotic', bn:'লবস্টার', bg:'#fdeef4'},
+  {id:'meat', ic:'🍗', en:'Desi Poultry & Meat', bn:'দেশি পোল্ট্রি ও মাংস', bg:'#fff6df'}
+];
+// [code, cat, english, bengali, detail, price (0 = market rate), unit, badge]
+const P = [
+  ['MNN-F01','fish','Datina Fish','দাঁতিনা মাছ','Per kg',599,'kg'],
+  ['MNN-F02','fish','Bhetki Fish','ভেটকি মাছ','Curry cut, per kg',699,'kg','Popular'],
+  ['MNN-F03','fish','Kain Fish (under 2 kg)','কাইন মাছ','Per kg',699,'kg'],
+  ['MNN-F04','fish','Kain Fish (over 2 kg)','কাইন মাছ','Per kg',799,'kg'],
+  ['MNN-F05','fish','River Mixed Fish','নদীর পাঁচমিশালী মাছ','500 g box',299,'box'],
+  ['MNN-F06','fish','Indian Salmon (Bhola)','ইন্ডিয়ান স্যামন','Per kg',799,'kg'],
+  ['MNN-F07','fish','Topse Fish','তপসে মাছ','Fresh, daily market rate',0,'kg'],
+  ['MNN-F08','fish','Rupchanda (Pomfret)','রূপচাঁদা মাছ','Fresh, daily market rate',0,'kg'],
+  ['MNN-F10','fish','Ilish (Burma)','ইলিশ (বার্মা)','Fresh, daily market rate',0,'kg'],
+  ['MNN-F11','fish','Ilish (Diamond Harbour)','ইলিশ (ডায়মন্ড হারবার)','Fresh, daily market rate',0,'kg','Seasonal'],
+  ['MNN-P01','prawn','Bagda Prawn (40 pcs/kg)','বাগদা চিংড়ি','40 pieces per kg',699,'kg'],
+  ['MNN-P03','prawn','Bagda Prawn (30 pcs/kg)','বাগদা চিংড়ি','30 pieces per kg',899,'kg'],
+  ['MNN-P05','prawn','Bagda Prawn (20 pcs/kg)','বাগদা চিংড়ি','20 pieces per kg',1199,'kg','Jumbo'],
+  ['MNN-P06','prawn','Tiger Prawn','টাইগার প্রন','Each piece over 100 g',1599,'kg','Premium'],
+  ['MNN-P07','prawn','Golda Prawn (20 pcs/kg)','গলদা চিংড়ি','20 pieces per kg',699,'kg'],
+  ['MNN-P08','prawn','Golda Prawn (8–10 pcs/kg)','গলদা চিংড়ি','8–10 pieces per kg',899,'kg'],
+  ['MNN-S01','prawn','Octopus','অক্টোপাস','Per kg',799,'kg'],
+  ['MNN-S02','prawn','Squid','স্কুইড','Per kg',699,'kg'],
+  ['MNN-S03','prawn','Crab Meat','ক্র্যাব মিট','Per kg',699,'kg'],
+  ['MNN-S04','prawn','Seafood Combo','সিফুড কম্বো','1 kg pack',799,'kg','Combo'],
+  ['MNN-C01','crab','Jumbo Male Crab','জাম্বো মেল','2 pieces per kg',799,'kg'],
+  ['MNN-C02','crab','Premium Male Crab','প্রিমিয়াম মেল','3 pieces per kg',599,'kg'],
+  ['MNN-C03','crab','Male–Female Combo','মেল-ফিমেল কম্বো','4 pieces per kg',590,'kg'],
+  ['MNN-C04','crab','Budget Crab Combo','বাজেট কম্বো','8–10 pieces per kg',399,'kg','Value'],
+  ['MNN-C05','crab','Super Jumbo Female Crab','সুপার জাম্বো ফিমেল','3 pcs/kg · full roe guarantee',1199,'kg','Full roe'],
+  ['MNN-C06','crab','Premium Female Crab','প্রিমিয়াম ফিমেল','4–5 pcs/kg · full roe guarantee',699,'kg','Full roe'],
+  ['MNN-C08','crab','Budget Female Crab','বাজেট ফিমেল','8–10 pcs/kg · full roe guarantee',499,'kg'],
+  ['MNN-C09','crab','Andaman Green Crab','আন্দামান গ্রিন ক্র্যাব','Up to 1 kg size',1200,'kg','Exotic'],
+  ['MNN-C10','crab','Andaman Green Crab (XL)','আন্দামান গ্রিন ক্র্যাব','Over 1 kg size',1499,'kg','Exotic'],
+  ['MNN-L01','lobster','Lobster (up to 300 g)','লবস্টার','Up to 300 g each',2000,'kg'],
+  ['MNN-L02','lobster','Lobster (300–700 g)','লবস্টার','300–700 g each',2200,'kg'],
+  ['MNN-L03','lobster','Lobster (700 g+)','লবস্টার','Over 700 g each',2500,'kg','Chef’s pick'],
+  ['MNN-M01','meat','Desi Chicken','দেশি মুরগি','Per kg',799,'kg'],
+  ['MNN-M02','meat','Desi Pati Duck','দেশি পাতি হাঁস','Over 1 kg, per piece',699,'pc'],
+  ['MNN-M03','meat','Peking (China) Duck','চিনা হাঁস','Per kg',499,'kg'],
+  ['MNN-M04','meat','Raj Hans (Goose)','রাজহাঁস','Per kg',599,'kg'],
+  ['MNN-M05','meat','Desi Khasi Mutton','দেশি খাসির মাংস','Sunday delivery only',1099,'kg','Sunday only'],
+];
+const catOf = id => CATS.find(c=>c.id===id);
+const inr = n => '₹' + n.toLocaleString('en-IN');
+let filter = 'all', cart = JSON.parse(localStorage.getItem('mohonaCart')||'{}');
+
+function renderCats(){
+  document.getElementById('cats').innerHTML = CATS.map(c=>`<div class="cat" style="background:${c.bg}" onclick="setFilter('${c.id}',true)"><div class="ic">${c.ic}</div><h3>${c.en}</h3><div class="bn">${c.bn}</div></div>`).join('');
+  document.getElementById('filters').innerHTML = [{id:'all',en:'All products'},...CATS].map(c=>`<button class="chip ${filter===c.id?'active':''}" onclick="setFilter('${c.id}')">${c.ic?c.ic+' ':''}${c.en}</button>`).join('');
+}
+function setFilter(id,scroll){filter=id;renderCats();renderGrid();if(scroll)document.getElementById('shop').scrollIntoView();}
+function renderGrid(){
+  const list = P.filter(p=>filter==='all'||p[1]===filter);
+  document.getElementById('grid').innerHTML = list.map(p=>{
+    const c=catOf(p[1]);
+    const price = p[5] ? `<div class="price">${inr(p[5])}<small> /${p[6]}</small></div>` : `<div class="price" style="font-size:14px">Market rate</div>`;
+    const btn = p[5] ? `<button class="add" onclick="add('${p[0]}')">+ Add</button>` : `<a class="add call" href="https://wa.me/918601506252?text=${encodeURIComponent('Today\'s price for '+p[2]+' ('+p[0]+')?')}" target="_blank" rel="noopener">Ask price</a>`;
+    return `<div class="card"><div class="thumb" style="background:${c.bg}"><span class="code">${p[0]}</span>${p[7]?`<span class="badge">${p[7]}</span>`:''}${c.ic}</div>
+      <div class="body"><h4>${p[2]}</h4><div class="bn">${p[3]}</div><div class="meta">${p[4]}</div><div class="row">${price}${btn}</div></div></div>`;
+  }).join('');
+}
+function save(){localStorage.setItem('mohonaCart',JSON.stringify(cart));document.getElementById('count').textContent=Object.values(cart).reduce((a,b)=>a+b,0);}
+function add(code){cart[code]=(cart[code]||0)+1;save();renderCart();toast('Added to cart ✓');}
+function qty(code,d){cart[code]+=d;if(cart[code]<=0)delete cart[code];save();renderCart();}
+function totals(){
+  const sub = Object.entries(cart).reduce((s,[k,q])=>s+P.find(p=>p[0]===k)[5]*q,0);
+  const del = sub===0?0:(sub>=1500?0:60);
+  return {sub,del,total:sub+del};
+}
+function renderCart(){
+  const keys=Object.keys(cart);
+  document.getElementById('items').innerHTML = keys.length ? keys.map(k=>{const p=P.find(x=>x[0]===k);return `<div class="it"><div class="e">${catOf(p[1]).ic}</div><div class="n">${p[2]}<small>${inr(p[5])} / ${p[6]}</small></div><div class="qty"><button onclick="qty('${k}',-1)">−</button>${cart[k]}<button onclick="qty('${k}',1)">+</button></div></div>`}).join('') : '<div class="empty">🛒<br>Your cart is empty</div>';
+  const t=totals();
+  document.getElementById('sum').innerHTML = keys.length ? `<div class="l"><span>Subtotal</span><span>${inr(t.sub)}</span></div><div class="l"><span>Delivery</span><span>${t.del?inr(t.del):'FREE'}</span></div><div class="l t"><span>Total</span><span>${inr(t.total)}</span></div><small style="color:var(--muted)">Free delivery on orders over ₹1,500</small><button class="btn primary" onclick="checkout()">Checkout →</button>` : '';
+}
+function openCart(){renderCart();document.getElementById('drawer').classList.add('show');document.getElementById('overlay').classList.add('show');}
+function closeAll(){['drawer','overlay','modal'].forEach(i=>document.getElementById(i).classList.remove('show'));}
+let pay='razorpay';
+function checkout(){
+  document.getElementById('drawer').classList.remove('show');
+  const t=totals(), hasMutton = !!cart['MNN-M05'];
+  const m=document.getElementById('modal');
+  m.innerHTML = `<h3>Checkout</h3>
+    <label>Full name</label><input placeholder="Your name">
+    <label>Mobile number</label><input placeholder="10-digit mobile" maxlength="10">
+    <label>Delivery branch / area</label><select><option>Santoshpur</option><option>Salt Lake</option><option>Siliguri</option></select>
+    <label>Delivery slot</label><select>${hasMutton?'<option>Sunday · 8–11 AM</option><option>Sunday · 11 AM–2 PM</option>':'<option>Today · 8–11 AM</option><option>Today · 4–7 PM</option><option>Tomorrow · 8–11 AM</option>'}</select>
+    ${hasMutton?'<small style="color:var(--coral)">Desi mutton in your cart: delivery is on Sunday only.</small>':''}
+    <div class="opts">
+      <div class="opt ${pay==='razorpay'?'sel':''}" onclick="pay='razorpay';checkout()"><span class="ic">💳</span><div><b>Pay online — Razorpay</b><small>UPI · Cards · Net banking · Wallets</small></div></div>
+      <div class="opt ${pay==='cod'?'sel':''}" onclick="pay='cod';checkout()"><span class="ic">💵</span><div><b>Cash on Delivery</b><small>Pay cash or UPI when your order arrives</small></div></div>
+    </div>
+    <button class="btn primary" style="width:100%" onclick="place()">${pay==='razorpay'?'Pay '+inr(t.total)+' with Razorpay':'Place order · '+inr(t.total)+' (COD)'}</button>
+    <p style="text-align:center;font-size:12px;color:var(--muted);margin:10px 0 0">Demo only. No payment will be charged.</p>`;
+  m.classList.add('show');document.getElementById('overlay').classList.add('show');
+}
+function place(){
+  const m=document.getElementById('modal'), id='MHN'+Math.floor(100000+Math.random()*900000);
+  const done=()=>{m.innerHTML=`<div class="done"><div class="ic">✅</div><h3>Order placed!</h3><p>Order <b>${id}</b> is confirmed${pay==='cod'?' with Cash on Delivery':' and paid via Razorpay'}.<br>We'll send you updates on WhatsApp.</p><button class="btn primary" onclick="closeAll()">Continue shopping</button></div>`;cart={};save();};
+  if(pay==='razorpay'){m.innerHTML=`<div class="done"><div class="ic">⏳</div><h3>Opening Razorpay…</h3><p style="color:var(--muted)">In the live site, Razorpay's secure checkout opens here.</p></div>`;setTimeout(done,1600);}else done();
+}
+function toast(t){const e=document.getElementById('toast');e.textContent=t;e.classList.add('show');clearTimeout(e._t);e._t=setTimeout(()=>e.classList.remove('show'),1600);}
+renderCats();renderGrid();save();
+</script>
+</body>
+</html>
